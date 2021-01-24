@@ -52,7 +52,7 @@ class MyTableViewController: UIViewController, UITableViewDataSource, UITableVie
         return cell
     }
     
-   func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+   func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             self.completeTable.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
